@@ -1,20 +1,34 @@
-// Chapter 3 Programming Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Jacob Walrath
+//10/2/2024
+//Chapter 3 Programming Project
+//Ingredient_Adjuster
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double cookies;
+    // Cookies are not going to cooked in anything other than whole numbers, 
+    // but it's a double so it can be used for division with the other variables.
+
+    cout << "How many cookies would you like to make? Please enter a whole number: ";
+    cin >> cookies;
+
+    double sugar;
+    double butter;
+    double flour;
+
+    double eleven;
+    eleven = 11;
+
+    sugar = (cookies / 32);
+    butter = (cookies / 48);
+    flour = (cookies / (192 / eleven));
+
+    cout << "You will need " << sugar << " cups of sugar for this recipe, " << endl;
+    cout << butter << " cups of butter for this recipe, " << endl;
+    cout << "and " << flour << " cups of flour for this recipe.";
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
