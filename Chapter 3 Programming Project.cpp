@@ -1,20 +1,34 @@
-// Chapter 3 Programming Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Jacob Walrath
+//10/2/2024
+//Chapter 3 Programming Project
+//Interest_Earned
 
 #include <iostream>
+#include <cmath>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double amount;
+
+    double principal;
+    double rate;
+    double compound;
+
+    cout << "What is the balance in the savings account including cents? ";
+    cin >> principal;
+    cout << "What is the interest rate as a decimal? ";
+    cin >> rate;
+    cout << "How many times is the interest compounded in the year? ";
+    cin >> compound;
+
+    amount = principal * ((1 + (rate / compound)) * pow(compound, 1.0));
+
+    cout << "Interest Rate: " << rate * 100 << "%" << endl;
+    cout << "Times Compounded: " << compound << endl;
+    cout << "Balance: $" << principal << endl;
+    cout << "Interest: $" << amount - principal << endl;
+    cout << "Amount in Savings: $" << amount;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
