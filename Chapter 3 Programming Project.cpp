@@ -4,7 +4,9 @@
 //Interest_Earned
 
 #include <iostream>
+#include <iomanip>
 #include <cmath>
+
 using namespace std;
 
 int main()
@@ -32,8 +34,8 @@ int main()
     cout << "Interest Rate: " << rate * 100 << "%" << endl;
     cout << "Times Compounded: " << compound << endl;
     cout << "Balance: $" << principal << endl;
-    cout << "Interest: $" << amount - principal << endl;
-    cout << "Amount in Savings: $" << amount;
+    cout << setprecision(2) << fixed << "Interest: $" << amount - principal << endl;
+    cout << setprecision(2) << fixed << "Amount in Savings: $" << amount;
 
     return 0;
 }
