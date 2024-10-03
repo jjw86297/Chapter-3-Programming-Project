@@ -10,6 +10,9 @@ using namespace std;
 int main()
 {
     double amount;
+    double change1;
+    double change2;
+    //These variables is simply used to change up the equation a little bit, as I couldn't get "pow" to work correctly.
 
     double principal;
     double rate;
@@ -22,7 +25,9 @@ int main()
     cout << "How many times is the interest compounded in the year? ";
     cin >> compound;
 
-    amount = principal * ((1 + (rate / compound)) * pow(compound, 1.0));
+    change1 = 1 + (rate / compound);
+    change2 = pow(change1, compound);
+    amount = principal * change2;
 
     cout << "Interest Rate: " << rate * 100 << "%" << endl;
     cout << "Times Compounded: " << compound << endl;
